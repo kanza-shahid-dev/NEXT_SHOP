@@ -46,6 +46,7 @@ git clone https://github.com/kanza-shahid-dev/NEXT_SHOP.git
 ```
 
 ### Step 2. **Running Backend:**
+In terminal
 
 ```bash
 cd backend
