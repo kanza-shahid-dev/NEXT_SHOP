@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import productRoutes from "./routes/productRoutes.js";
 
 const app = express();
 dotenv.config();
@@ -9,8 +10,12 @@ dotenv.config();
 const PORT = process.env.PORT || 5001;
 
 //Middleware
-app.use(cors());
-app.use(express.json());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+  })
+);
+app.use(express.json({ limit: "10mb" }));
 
 app.listen(PORT, () => {
   mongoose
@@ -18,3 +23,6 @@ app.listen(PORT, () => {
     .then(() => console.log("db connected"))
     .catch((error) => console.log("DB error", error));
 });
+
+app.use("/product", productRoutes);
+app.use("/images", express.static("images"));
