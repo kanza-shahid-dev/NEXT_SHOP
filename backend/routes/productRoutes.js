@@ -8,7 +8,7 @@ import { convertImageToSvg } from "../utils/convertImage.js";
 const router = express.Router();
 
 router.post("/add", upload.single("image"), async (req, res) => {
-  const { name, price, description, imageData, imagePath } = req.body;
+  const { name, price, description, imagesData } = req.body;
 
   console.log("file", req.file);
   try {
@@ -23,7 +23,7 @@ router.post("/add", upload.single("image"), async (req, res) => {
       name,
       price,
       description,
-      imageData,
+      imagesData,
       coverImage: `/images/${path.basename(svgPath)}`,
     });
 
@@ -44,7 +44,7 @@ router.get("/list", async (req, res) => {
       name: product.name,
       price: product.price,
       description: product.description,
-      imageData: product.imageData,
+      imagesData: product.imagesData,
       coverImage: product.coverImage,
     }));
 
