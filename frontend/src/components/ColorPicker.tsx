@@ -27,7 +27,7 @@ export default function ColorPicker({ onColorChange }: ColorPickerProps) {
 
   return (
     <div className="flex mt-4 gap-3 flex-wrap items-center">
-      {predefinedColors.map((color) => (
+      {predefinedColors?.map((color) => (
         <button
           key={color}
           onClick={() => handleColorChange(color)}

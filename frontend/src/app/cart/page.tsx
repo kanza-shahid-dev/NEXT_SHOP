@@ -52,7 +52,7 @@ export default function CartPage() {
             <p>Your cart is empty.</p>
           ) : (
             <div className="space-y-4">
-              {cartItems.map((item) => (
+              {cartItems?.map((item) => (
                 <div
                   key={item.product.id}
                   className="flex items-center justify-between border-b pb-4"

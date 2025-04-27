@@ -42,8 +42,8 @@ export default function Home() {
         Featured Products
       </h1>
       <p className="text-1xl my-10 text-center">
-        Welcome to our Customizable E-Commerce Platform. Ecoomerce website where
-        you can customize and place order according to own choice.
+        Welcome to our Customizable E-Commerce Platform. A website where you can
+        customize and place order according to own choice.
       </p>
       {loading ? (
         <Loader />

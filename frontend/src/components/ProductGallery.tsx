@@ -3,7 +3,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 
 function ProductGallery({ images, openGallery, setOpenGallery }: any) {
-  const slides = images.map((img: string) => ({ src: img }));
+  const slides = images?.map((img: string) => ({ src: img }));
   return (
     <>
       {openGallery && (

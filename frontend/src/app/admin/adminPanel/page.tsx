@@ -21,8 +21,7 @@ const AdminPanel = () => {
       name: "",
       price: "",
       image: "",
-      imageData: [] as string[],
-      imagePath: null,
+      imagesData: [] as string[],
       description: "",
     },
   });
@@ -30,8 +29,6 @@ const AdminPanel = () => {
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
-      form.setValue("imagePath", files?.[0] ?? null);
-
       const readers = Array.from(files).map((file) => {
         return new Promise<string>((resolve, reject) => {
           const reader = new FileReader();
@@ -41,12 +38,13 @@ const AdminPanel = () => {
         });
       });
       Promise.all(readers).then((imagesData) => {
-        form.setValue("imageData", imagesData);
+        form.setValue("imagesData", imagesData);
       });
     }
   };
 
   const onSubmit = async (data: ProductFormValues) => {
+    console.log("onSubmit", data);
     const formData = new FormData();
 
     formData.append("name", data.name);
@@ -56,6 +54,11 @@ const AdminPanel = () => {
     if (data.imagePath) {
       formData.append("image", data.imagePath);
     }
+
+    data.imagesData.forEach((image) => {
+      formData.append("imagesData[${index}]", image);
+    });
+
     await axios.post(apiBaseUrl + "/product/add", formData).then(() => {
       toast.success("Product added");
       form.reset();

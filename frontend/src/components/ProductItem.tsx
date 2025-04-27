@@ -19,7 +19,6 @@ type ProductItemProps = {
 function ProductItem({ product }: ProductItemProps) {
   const [selectedColor, setSelectedColor] = useState(product.color);
   const [quantity, setQuantity] = useState(1);
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [openGallery, setOpenGallery] = useState(false);
   const [svgContent, setSvgContent] = useState("");
 
@@ -68,15 +67,16 @@ function ProductItem({ product }: ProductItemProps) {
     setSelectedColor(color);
   };
   const totalPrice = product.price * quantity;
+  console.log("prod", product);
 
   return (
     <div className="p-4 border rounded-xl shadow hover:shadow-md transition">
       <ProductImage coverImage={coloredSvg} setOpenGallery={setOpenGallery} />
       <ProductGallery
         coverImage={product.coverImage}
-        images={product.imageData}
+        images={product.imagesData}
         openGallery={openGallery}
-        setOpen={setOpenGallery}
+        setOpenGallery={setOpenGallery}
         alt="Product"
       />
 
