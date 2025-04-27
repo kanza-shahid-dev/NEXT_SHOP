@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "680e08946f00106ccf710223",
+    "name": "Ecommerce Design Shirt",
+    "price": 23,
+    "description": "Elevate your casual wardrobe with this Classic Cotton Shirt. Crafted from premium quality 100% cotton fabric, this shirt offers all-day comfort and breathability. Its soft, lightweight texture makes it the perfect choice for warm days, while the stylish design ensures you look sharp wherever you go",
+    "imageData": [],
+    "coverImage": "/images/1745744139277.svg"
+  },
+  {
+    "_id": "680dfca5e06064b5f826380a",
+    "name": "Baby Frok",
+    "price": 2,
+    "description": "Dress your baby in the cutest and most comfortable frock made from soft, breathable cotton. Our baby frock is perfect for all occasions – from daily wear to special events. Whether it's a sunny day at the park, a family gathering, or a casual outing, this frock will keep your baby looking stylish while ensuring comfort all day long.",
+    "imageData": [],
+    "coverImage": "/images/1745747109466.svg"
+  },
+  {
+    "_id": "680e10cb6f00106ccf710224",
+    "name": "Stuffed Bear",
+    "price": 5,
+    "description": "Meet our irresistibly soft and cuddly Stuffed Bear ",
+    "imageData": [],
+    "coverImage": "/images/1745747669956.svg"
+  },
+  {
+    "_id": "680e10e76f00106ccf710225",
+    "name": "Toy car",
+    "price": 5,
+    "description": "These are classic, simple toy cars often found in traditional wooden toy sets. They are smooth, durable, and often hand-painted or crafted.",
+    "imageData": [],
+    "coverImage": "/images/1745747983148.svg"
+  },
+  {
+    "_id": "680e007d460ba31c1d3b14ae",
+    "name": "Frok",
+    "price": 30,
+    "description": "Despite its delicate look, this frock is machine washable and made to withstand the wear and tear of everyday play.",
+    "imageData": [],
+    "coverImage": "/images/1745748093159.svg"
+  },
+  {
+    "_id": "680e0096460ba31c1d3b14b0",
+    "name": "Dice",
+    "price": 3,
+    "description": "The most common type, typically a six-sided cube, with each face numbered from 1 to 6.",
+    "imageData": [],
+    "coverImage": "/images/1745748117969.svg"
+  }
+]
