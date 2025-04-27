@@ -1,6 +1,6 @@
-# **NextShop - Next.js**
+# **NextShop**
 
-This is an e-commerce website, developed with **Next.js 15+**.
+This is an e-commerce website, A website where you can customize and place order according to own choice**.
 
 ## **📋 Project Overview**
 
