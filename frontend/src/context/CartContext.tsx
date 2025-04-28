@@ -44,26 +44,27 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   }, [cartItems]);
 
   const addItem = (product: Product, quantity: number) => {
+    if (quantity <= 0) return;
+
     setCartItems((prevItems) => {
-      const itemIndex = prevItems.findIndex(
+      const existingItem = prevItems.find(
         (item) => item.product.id === product.id
       );
 
-      if (itemIndex !== -1) {
-        const updatedItems = [...prevItems];
-        updatedItems[itemIndex].quantity += quantity;
-        console.log("Updated existing item:", updatedItems);
-        return updatedItems;
+      if (existingItem) {
+        return prevItems.map((item) =>
+          item.product.id === product.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
       } else {
-        const newItems = [
+        return [
           ...prevItems,
           {
             product,
             quantity,
           },
         ];
-        console.log("Added new item:", newItems);
-        return newItems;
       }
     });
   };
