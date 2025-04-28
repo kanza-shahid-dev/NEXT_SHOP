@@ -2,6 +2,10 @@
 
 This is an e-commerce website, A website where you can customize and place order according to own choice**.
 
+## **📋 Project Demo Video**
+
+https://github.com/user-attachments/assets/fbab8aa0-7711-4bde-b2fb-4964bbad6e32
+
 ## **📋 Project Overview**
 
 This project showcases an e-commerce product page with the following features:
