@@ -39,13 +39,14 @@ This project showcases an e-commerce product page with the following features:
 
 To get started with this project locally, follow these steps:
 
-### 1. **Clone the repository:**
+### Step 1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/kanza-shahid-dev/NEXT_SHOP.git
 ```
 
-### 2. **Running Backend:**
+### Step 2. **Running Backend:**
+In terminal
 
 ```bash
 cd backend
@@ -53,7 +54,7 @@ npm i
 npm run dev
 ```
 
-### 3. **Running Frontned:**
+### Step 3. **Running Frontend:**
 
 ```bash
 cd frontend
