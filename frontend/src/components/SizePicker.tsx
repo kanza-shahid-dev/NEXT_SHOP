@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 
 function SizePicker() {

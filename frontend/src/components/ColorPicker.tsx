@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 interface ColorPickerProps {
   onColorChange: (color: string) => void;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { Card, CardContent } from "./ui/card";
 import SizePicker from "./SizePicker";
 import { toast } from "react-toastify";
 import { useCart } from "@/context/CartContext";
